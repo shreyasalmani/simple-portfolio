@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Personal Portfolio Website </title>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://kit.fontawesome.com/68a0e2842c.js" crossorigin="anonymous"></script>
+
+    </head>
+    <body>
+
+        <div id="header">
+            <div class="container">
+                <nav>
+                    <img src="images/loggo.jpg" class="logo">
+                    <ul>
+                        <li><a href="#header">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#Projects">Projects</a></li>
+                        <li><a href="#Contact">Contact</a></li>
+                        
+                    </ul>
+                   
+                </nav>
+                <div class="header-text">
+                    <h1>Hi,I'm <span>Shreya</span> Salmani<br>From Gogte Institute Of Technology</h1>
+                    <p>Computer Science Student</p>
+                </div>
+
+            </div>
+
+        </div>
+        
+        <div id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="about-col-1">
+                        <img src="images/image2.jpg">
+                    </div>
+
+                    <div class="about-col-2">
+                        <h1 class="sub-title">About Me</h1>
+                        <p> I am an enthusiastic, self-motivated, responsible and hard working person. I am a mature team worker and adaptable to all challenging situations. I am able to work well both in a team environment as well as using own initiative. I am able to work well under pressure and adhere to strict deadlines.</p>
+                      
+                      
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('skills')" >Skills</p>
+                            <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                            <p class="tab-links" onclick="opentab('education')">Education</p>
+
+                        </div>
+
+
+
+                        <div class="tab-contents active-tab" id="skills">
+                            <ul>
+                                <li><span>C Programming</span></li>
+                                <li><span>Python</span></li>
+                                <li><span>HTML/CSS</span></li>
+                                <li><span>DBMS</span></li>
+                            </ul>
+                            </div>
+
+                            <div class="tab-contents" id="experience">
+                                <ul>
+                                    <li><span>FRESHER</span><br>0 Yrs Of Experience</li>
+        
+                                </ul>
+                                </div>
+
+                                <div class="tab-contents" id="education">
+                                    <ul>
+                                        <li><span>2024</span><br>Computer Science Engineering<br>Gogte institute of technology,belgaum<br>8.21cgpa</li>
+                                        <li><span>2020</span><br>Pre University college<br>Alvas PUC college,moodbidri<br>90%</li>
+                                        <li><span>2018</span><br>SSLC<br>Little flower high school<br>91.2%</li>
+
+                                    </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+
+        <div id="Projects">
+            <div class="container">
+                <h1 class="sub-title">My Projects</h1>
+                <div class="Projects-list"></div>
+
+            <div>
+                
+                <h2>1.A DATABASE FOR COFFEE PREPARATION APP</h2>
+                <p>Here we build a App where we are going keep track of a coffee beans and keep track of the way that we've made the coffee with a percolater with our expresso machine or filter</p>
+                
+            </div>
+
+            <div>
+                
+                <h2>2.TO-DO LIST APP </h2>
+                <p>Building a todo list web app in HTML, CSS and JavaScript with the ability to display, create, edit and delete your tasks. Task list, to-do list, shopping list. </p>
+            </div>
+
+
+        </div>
+        <div id="Contact">
+            <div class="container">
+                <div class="row">
+                    <div class="contact-left">
+                        <h1 class="sub-title">Contact Me</h1>
+                        <p><i class="fa-solid fa-paper-plane"></i>contact@example.com</p>
+                        <p><i class="fa-solid fa-phone"></i>767680XXXX</p>
+                        <div class="social-icons">
+            
+                            <a href="https://www.instagram.com/shreya_salmani06?igsh=MXhuaWJ1NnkxNHhjbg=="><i class="fa-brands fa-instagram"></i></a>
+                            <a href="https://www.linkedin.com/in/shreya-salmani-3b78a5231?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="fa-brands fa-linkedin"></i></a>
+                        </div>
+                       
+                    
+                       <a href="images/S-CV.pdf" download class="btn btn2">Download Cv</a> 
+                    </div>
+                    <div class="contact-right">
+                        <form name="submit-to-google-sheet">
+                            <input type="text" name="Name" placeholder="Your Name" required>
+                            <input type="email" name="Email" placeholder="Your email" required>
+                            <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                            <button type="submit" class="btn btn2">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>Copyright © shreya</p>
+            </div>
+        </div>
+
+        <script>
+            var tablinks = document.getElementsByClassName("tab-links");
+            var tabcontents = document.getElementsByClassName("tab-contents");
+
+            function opentab(tabname){
+                for(tablink of tablinks){
+                    tablink.classList.remove("active-link");
+                }
+                for(tabcontent of tabcontents){
+                    tabcontent.classList.remove("active-tab");
+                }
+                event.currentTarget.classList.add("active-link");
+                document.getElementById(tabname).classList.add("active-tab");
+            }
+
+        </script>
+<script>
+    const scriptURL = '<https://script.google.com/macros/s/AKfycbzlDwM_8DFcC6L2XLGmp5gXtUcQI1lDKPTxYT-qOYCwUhiUmEiLgbb2FCfsG4fBdu3D-g/exec>'
+    const form = document.forms['submit-to-google-sheet']
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => console.log('Success!', response))
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+    </body>
+</html>
